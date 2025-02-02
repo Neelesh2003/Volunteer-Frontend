@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Volunteering Platform</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <style>
+    /* Body Styling */
+    body {
+      background-color: #e9ecef;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background: linear-gradient(90deg, #4e73df, #1cc88a);
+      border-radius: 0;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar-brand {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffcc00 !important;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Container for Main Content */
+    .container {
+      margin-top: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Main Heading Styling */
+    .display-4 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    /* Subheading Styling */
+    .lead {
+      font-size: 1.25rem;
+      color: #666;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+
+    /* Button Styling */
+    .btn-nav {
+      background-color: #1cc88a;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-nav:hover {
+      background-color: #17a673;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+      }
+
+      .display-4 {
+        font-size: 2.5rem;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Community Volunteering Platform</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1 class="display-4">Community Volunteering Platform</h1>
+    <p class="lead">Connecting organizations and volunteers to achieve impactful tasks together!</p>
+    <a href="register.html" class="btn btn-nav mt-4">Get Started</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

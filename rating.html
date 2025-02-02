@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Volunteers - Community Volunteering Platform</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <style>
+    /* Body Styling */
+    body {
+      background-color: #f4f6f9;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+    background: linear-gradient(90deg, #4e73df, #1cc88a);
+	  padding-top: 30px;
+	  padding-bottom: 20px;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffcc00 !important;
+    }
+
+    /* Title and Subtitle Styling */
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Table Styling */
+    table {
+      margin-top: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+    }
+
+    td {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    /* Input & Button Styling */
+    .form-select, .form-control {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <div class="container"> -->
+      <a class="navbar-brand" href="#">Community Volunteering Platform</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="organization_dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile_organization.html">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="add_task.html">Add Task</a></li>
+          <li class="nav-item"><a class="nav-link" href="view_tasks.html">View Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="update_task.html">Update Tasks</a></li>
+          <li class="nav-item"><a class="nav-link" href="rating.html">Ratings</a></li>
+          <li class="nav-item"><a class="nav-link" href="logout.html">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Rating Section -->
+  <div class="container mt-5">
+    <h2>Rate Volunteers</h2>
+    <p>Assign ratings to volunteers based on their performance for tasks.</p>
+
+    <!-- Volunteer Rating Form -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Volunteer Name</th>
+          <th>Rating</th>
+          <th>Comments</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example rows; replace with dynamic content -->
+        <tr>
+          <td>Clean the Beach</td>
+          <td>Volunteer A</td>
+          <td>
+            <select class="form-select">
+              <option value="">Select Rating</option>
+              <option value="1">1 - Poor</option>
+              <option value="2">2 - Fair</option>
+              <option value="3">3 - Good</option>
+              <option value="4">4 - Very Good</option>
+              <option value="5">5 - Excellent</option>
+            </select>
+          </td>
+          <td><input type="text" class="form-control" placeholder="Add comments"></td>
+          <td><button class="btn btn-primary">Submit</button></td>
+        </tr>
+        <tr>
+          <td>Health Checkup Camp</td>
+          <td>Volunteer B</td>
+          <td>
+            <select class="form-select">
+              <option value="">Select Rating</option>
+              <option value="1">1 - Poor</option>
+              <option value="2">2 - Fair</option>
+              <option value="3">3 - Good</option>
+              <option value="4">4 - Very Good</option>
+              <option value="5">5 - Excellent</option>
+            </select>
+          </td>
+          <td><input type="text" class="form-control" placeholder="Add comments"></td>
+          <td><button class="btn btn-primary">Submit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

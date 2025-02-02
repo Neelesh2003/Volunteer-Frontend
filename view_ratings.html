@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Ratings - Community Volunteering Platform</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <style>
+    /* Body Styling */
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background: linear-gradient(90deg, #4e73df, #1cc88a);
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffcc00 !important;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #ffcc00 !important;
+    }
+
+    /* Main Content Styling */
+    .container {
+      margin-top: 50px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Table Styling */
+    .table {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .table th {
+      background-color: #4e73df;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .table td {
+      background-color: #f8f9fa;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #f1f3f5;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar-brand {
+        font-size: 1.3rem;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- <div class="container"> -->
+      <a class="navbar-brand" href="#">Community Volunteering Platform</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="volunteer_dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile_volunteer.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="available_tasks.html">Available Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="enrolled_tasks.html">Enrolled Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="view_ratings.html">View Ratings</a> <!-- Current page -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Ratings Section -->
+  <div class="container mt-5">
+    <h2>Your Ratings</h2>
+    <p>Here are the ratings given to you by organizations:</p>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Organization Name</th>
+          <th>Rating</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody id="ratingsTableBody">
+        <!-- Dynamic content will be loaded here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Example dynamic data (replace with backend API integration)
+    const ratingsData = [
+      { taskName: "Teach Children Math", orgName: "ABC Foundation", rating: "4.5", comments: "Excellent work!" },
+      { taskName: "Health Checkup Camp", orgName: "Health+ Org", rating: "4.0", comments: "Good contribution, but timing can improve." },
+      { taskName: "Clean the Beach", orgName: "Eco Warriors", rating: "5.0", comments: "Amazing effort and dedication!" },
+    ];
+
+    // Populate the ratings table dynamically
+    const ratingsTableBody = document.getElementById('ratingsTableBody');
+    ratingsData.forEach(rating => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${rating.taskName}</td>
+        <td>${rating.orgName}</td>
+        <td>${rating.rating}</td>
+        <td>${rating.comments}</td>
+      `;
+      ratingsTableBody.appendChild(row);
+    });
+  </script>
+</body>
+</html>
